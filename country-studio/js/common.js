@@ -8,59 +8,6 @@ $(document).ready(function(){
 	});
 
 
-   /// closeform.click(function(){
-  //      openform.removeClass('active-form');
-   //     $('.open-form form').css('display', 'none')
-   //     $('.fb-analistic').css('height', '350px');
-    //});
-
-
-
-
-/// TITLE FORM ///
-
- 
-  /*  var form =  $('.title-form input[type="name"]');
-    var form2 =  $('.title-form input[type="phone"]');
-    var form3 =  $('.title-form input[type="mail"]');
-    var message = $('.message');
-    var title_button = $('.title-form button');
-
-
-    title_button.click(function(){
-        form.removeClass('active');
-        form2.removeClass('active');
-        form3.removeClass('active');
-        message.removeClass('active'); 
-    });
-
-    form.click(function(){
-        form.toggleClass('active');
-        form2.removeClass('active');
-        form3.removeClass('active');
-        message.removeClass('active');
-    });
-    form2.click(function(){
-        form2.toggleClass('active');
-        form.removeClass('active');
-        form3.removeClass('active');
-        message.removeClass('active');
-    });
-    form3.click(function(){
-        form3.toggleClass('active');
-        form2.removeClass('active');
-        form.removeClass('active');
-        message.removeClass('active');
-    });
-
-    message.click(function(){
-        form3.removeClass('active');
-        form2.removeClass('active');
-        form.removeClass('active');
-        message.toggleClass('active');
-    });*/
-
-
 /// SLOW SCROLL WITH MENU ///
 
     $('.menu').on("click", "a", function (event){
@@ -80,6 +27,45 @@ $(document).ready(function(){
 
         $('body, html').animate({scrollTop: top}, 1300);
     });
+
+
+    $(window).scroll(function(){
+        if($(this).scrollTop()>110){
+            $('header').addClass('fixed');
+            $('header').css({
+                height: '90px',
+                padding: '5px 0px'
+            });
+        }
+        else if ($(this).scrollTop()<110){
+            $('header').removeClass('fixed');
+            $('header').css({
+                height: '115px',
+                padding: '20px 0px'
+            });
+        };
+    });
+
+
+$(document).ready(function(){
+    $('#service_slider').owlCarousel({
+
+        items : 3,
+        nav : true,
+        autoWidth : false,
+
+    });
+});
+
+
+
+   /// closeform.click(function(){
+  //      openform.removeClass('active-form');
+   //     $('.open-form form').css('display', 'none')
+   //     $('.fb-analistic').css('height', '350px');
+    //});
+
+
 
 
 /// SCROLL UP ///
